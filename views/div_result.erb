@@ -1,1 +1,24 @@
-<h1>Division</h1>
+<h1>Division Result</h1>
+
+<dl>
+  <!-- Display First Number -->
+  <dt>First Number:</dt>
+  <dd><%= @first_num %></dd>
+
+  <!-- Display Second Number -->
+  <dt>Second Number:</dt>
+  <dd><%= @second_num %></dd>
+
+  <!-- Display Result -->
+  <dt>Result:</dt>
+  <dd>
+    <% if @result.is_a?(String) %>
+      <%= @result %>
+    <% else %>
+      <%= @result.round(2) %> <!-- Round to 2 decimal places -->
+    <% end %>
+  </dd>
+</dl>
+
+<!-- Link to Start Another Division -->
+<a href="/divide">Do another division</a>
